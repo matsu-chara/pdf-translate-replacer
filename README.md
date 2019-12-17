@@ -1,0 +1,3 @@
+# pdf-translator-replacer
+
+pdfをgoogle翻訳にコピペした時に読みやすい形式にフォーマットしてくれるchrome拡張

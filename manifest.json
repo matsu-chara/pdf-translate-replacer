@@ -1,0 +1,29 @@
+{
+  "name": "pdf-translate-replacer",
+  "version": "1",
+  "manifest_version": 2,
+  "description": "replace pdf pasted string for translator",
+  "browser_action":{
+    "default_icon":{
+      "32": "icons/icon_32.png"
+    },
+		"default_title": "pdf-translate-replacer"
+  },
+	"icons": {
+		"32": "icons/icon_32.png",
+		"48": "icons/icon_48.png",
+		"128": "icons/icon_128.png"
+	},
+  "content_scripts": [{
+      "matches": ["https://translate.google.com/*"],
+      "js": ["script.js"]
+    }],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+    "tabs",
+    "background",
+		"https://translate.google.com/*"
+	]
+}

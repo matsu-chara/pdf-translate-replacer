@@ -15,7 +15,10 @@
     "128": "icons/icon_128.png"
   },
   "content_scripts": [{
-    "matches": ["https://translate.google.com/*"],
+    "matches": [
+        "https://translate.google.com/*",
+        "https://translate.google.co.jp/*"
+    ],
     "js": ["script.js"],
     "run_at": "document_end"
   }],
@@ -25,6 +28,7 @@
   "permissions": [
     "tabs",
     "background",
-    "https://translate.google.com/*"
+    "https://translate.google.com/*",
+    "https://translate.google.co.jp/*"
   ]
 }

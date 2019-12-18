@@ -7,6 +7,8 @@
   },
   "devDependencies": {
     "eslint": "^6.7.2",
-    "jsfmt": "^0.5.3"
+    "jsfmt": "^0.5.3",
+    "diff": ">=3.5.0",
+    "deep-extend": ">=0.5.1"
   }
 }

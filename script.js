@@ -1,6 +1,6 @@
-chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
+chrome.extension.onMessage.addListener(function(request, sender, sendResponse) { // eslint-disable-line no-unused-vars
   if (request == "Action") {
-    str = get_str();
+    let str = get_str();
     str = replace(str);
     write_str(str);
   }

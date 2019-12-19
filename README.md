@@ -5,6 +5,12 @@ pdfをgoogle翻訳にコピペした時に読みやすい形式にフォーマ�
 
 ## install
 
+以下からインストールできます。
+
+https://chrome.google.com/webstore/detail/pdf-translate-replacer/gedfomnobchkoigdahfeinhnjnkdfdok
+
+または以下でもインストール可能です。
+
 - このリポジトリをダウンロード
 - chrome://extensions/ を開く
 - デベロッパーモードON

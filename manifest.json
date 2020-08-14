@@ -1,6 +1,6 @@
 {
   "name": "pdf-translate-replacer",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 2,
   "description": "replace pdf pasted string for translator",
   "browser_action":{

@@ -26,7 +26,6 @@
     "scripts": ["background.js"]
   },
   "permissions": [
-    "tabs",
     "background",
     "https://translate.google.com/*",
     "https://translate.google.co.jp/*"

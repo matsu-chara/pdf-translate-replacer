@@ -1,0 +1,39 @@
+{
+  "name": "pdf-translate-replacer",
+  "version": "1.3",
+  "manifest_version": 2,
+  "description": "replace pdf pasted string for translator",
+  "page_action": {
+    "default_icon": {
+      "32": "icons/icon_32.png"
+    },
+    "default_title": "pdf-translate-replacer"
+  },
+  "icons": {
+    "32": "icons/icon_32.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://translate.google.com/*",
+        "https://translate.google.co.jp/*",
+        "https://www.deepl.com/translator"
+      ],
+      "js": ["content_scripts.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "https://translate.google.com/*",
+    "https://translate.google.co.jp/*",
+    "https://www.deepl.com/translator"
+  ]
+}

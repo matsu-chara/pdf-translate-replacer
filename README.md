@@ -1,6 +1,6 @@
 # pdf-translator-replacer
 
-pdfをgoogle翻訳にコピペした時に読みやすい形式にフォーマットしてくれるchrome拡張
+pdfをgoogle翻訳/deepLにコピペした時に読みやすい形式にフォーマットしてくれるchrome拡張
 
 
 ## install
@@ -19,5 +19,5 @@ https://chrome.google.com/webstore/detail/pdf-translate-replacer/gedfomnobchkoig
 
 ## usage
 
-- google翻訳の翻訳欄にpdfからコピーした文章をpaste
+- google翻訳/deepLの翻訳欄にpdfからコピーした文章をpaste
 - このクローム拡張のボタンを押す

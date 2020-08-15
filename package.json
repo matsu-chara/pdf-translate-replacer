@@ -32,5 +32,8 @@
   },
   "resolutions": {
     "fast-glob": "https://files-5653q5abb.now.sh"
+  },
+  "dependencies": {
+    "webextension-polyfill-ts": "^0.19.0"
   }
 }

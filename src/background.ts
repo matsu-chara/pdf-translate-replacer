@@ -10,10 +10,10 @@ const tabUpdateListener = async (
   }
 
   const found = targets.findTarget(tab.url);
-  if (found != undefined) {
-    await browser.pageAction.show(tabId);
+  if (found == undefined) {
+    return;
   }
-  return;
+  await browser.pageAction.show(tabId);
 };
 
 const onClickedListener = async (tab: Tabs.Tab): Promise<void> => {
@@ -22,10 +22,10 @@ const onClickedListener = async (tab: Tabs.Tab): Promise<void> => {
   }
 
   const found = targets.findTarget(tab.url);
-  if (found != undefined) {
-    await browser.tabs.sendMessage(tab.id, found);
+  if (found == undefined) {
+    return;
   }
-  return;
+  await browser.tabs.sendMessage(tab.id, found);
 };
 
 browser.tabs.onUpdated.addListener((tabId, _, tab) => {

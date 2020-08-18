@@ -16,5 +16,7 @@ jobs:
         run: yarn install
       - name: run lint
         run: yarn lint
-      - name: run Jest
+      - name: run build
+        run: yarn build
+      - name: run test
         run: yarn test

@@ -1,6 +1,6 @@
 {
   "name": "pdf-translate-replacer",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "main": "index.js",
   "repository": "git@github.com:matsu-chara/pdf-translate-replacer.git",
   "author": "matsu-chara <matsuy00@gmail.com>",
@@ -9,7 +9,7 @@
     "build": "webpack --mode=development",
     "test": "jest",
     "lint": "eslint '*.js' '*.ts' 'src/**/*.ts'",
-    "dist": "webpack --mode=production && rm -rf pdf_translate_replacer.zip && zip -r pdf_translate_replacer.zip dist/*"
+    "release": "./scripts/release.sh"
   },
   "devDependencies": {
     "@types/copy-webpack-plugin": "^6.0.0",

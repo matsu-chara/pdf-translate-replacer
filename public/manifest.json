@@ -1,6 +1,6 @@
 {
   "name": "pdf-translate-replacer",
-  "version": "1.4",
+  "version": "1.4.0",
   "manifest_version": 2,
   "description": "replace pdf pasted string for translator",
   "page_action": {
@@ -22,12 +22,16 @@
         "https://translate.google.co.jp/*",
         "https://www.deepl.com/translator"
       ],
-      "js": ["content_scripts.js"],
+      "js": [
+        "content_scripts.js"
+      ],
       "run_at": "document_end"
     }
   ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": false
   },
   "permissions": [

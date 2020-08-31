@@ -19,4 +19,20 @@ Mstr. D, Dr.E and Prt. F are friends.`;
 Mrs.C, Mstr. D, Dr.E and Prt. F are friends.`;
     expect(replacer.replace(original)).toEqual(expected);
   });
+
+  test("e.g., i.e.", () => {
+    const original = `e.g. containers. This is a
+book. i.e. this is a book. in chapter 2.a.
+this is a book`;
+    const expected = `e.g. containers.
+
+This is a book.
+
+i.e. this is a book.
+
+in chapter 2.a.
+
+this is a book`;
+    expect(replacer.replace(original)).toEqual(expected);
+  });
 });

@@ -35,4 +35,15 @@ in chapter 2.a.
 this is a book`;
     expect(replacer.replace(original)).toEqual(expected);
   });
+
+  test("• bullets", () => {
+    const original = `following are samples • one is a pen; and • one
+is a pen.`;
+    const expected = `following are samples
+
+• one is a pen; and
+
+• one is a pen.`;
+    expect(replacer.replace(original)).toEqual(expected);
+  });
 });

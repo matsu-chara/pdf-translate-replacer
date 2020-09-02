@@ -41,7 +41,8 @@ this is a book`;
 is a pen.`;
     const expected = `following are samples
 
-• one is a pen; and
+• one is a pen;
+and
 
 • one is a pen.`;
     expect(replacer.replace(original)).toEqual(expected);
@@ -50,6 +51,23 @@ is a pen.`;
   test("et al.", () => {
     const original = `Alie et al. designed awesome architecure.`;
     const expected = `Alie et al. designed awesome architecure.`;
+    expect(replacer.replace(original)).toEqual(expected);
+  });
+
+  test(":", () => {
+    const original = `These components are:
+• Something`;
+    const expected = `These components are:
+
+• Something`;
+    expect(replacer.replace(original)).toEqual(expected);
+  });
+
+  test(";", () => {
+    const original = `These components;
+Those components`;
+    const expected = `These components;
+Those components`;
     expect(replacer.replace(original)).toEqual(expected);
   });
 });

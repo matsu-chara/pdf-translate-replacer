@@ -46,4 +46,10 @@ is a pen.`;
 • one is a pen.`;
     expect(replacer.replace(original)).toEqual(expected);
   });
+
+  test("et al.", () => {
+    const original = `Alie et al. designed awesome architecure.`;
+    const expected = `Alie et al. designed awesome architecure.`;
+    expect(replacer.replace(original)).toEqual(expected);
+  });
 });

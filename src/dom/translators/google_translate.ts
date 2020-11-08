@@ -1,34 +1,34 @@
 import { DomProcessor } from "../processor";
 
 export class GoogleTranslator implements DomProcessor {
-  private readonly textareaId = "source";
+  private readonly textareaLabel = "原文";
 
   getStr(document: Document): string | undefined {
-    const dom = document.getElementById(this.textareaId);
+    const dom = document.querySelector('[aria-label="' + this.textareaLabel + '"]');
     if (dom == null) {
       return undefined;
     }
 
-    const domValue = checkHasValue(dom);
-    if (domValue == undefined) {
+    const content = dom?.textContent;
+    if (content == null) {
       return undefined;
     }
 
-    return domValue.value;
+    return content;
   }
 
   writeStr(document: Document, newValue: string): void {
-    const dom = document.getElementById(this.textareaId);
+    const dom = document.querySelector('[aria-label="' + this.textareaLabel + '"]');
     if (dom == null) {
       return;
     }
 
-    const domValue = checkHasValue(dom);
-    if (domValue == undefined) {
-      return;
+    const content = dom?.textContent;
+    if (content == null) {
+      return undefined;
     }
 
-    domValue.value = newValue;
+    dom.textContent = newValue;
   }
 }
 

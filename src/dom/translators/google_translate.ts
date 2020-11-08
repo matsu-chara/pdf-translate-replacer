@@ -28,7 +28,13 @@ export class GoogleTranslator implements DomProcessor {
       return;
     }
     domValue.value = newValue;
-    dom.dispatchEvent(new InputEvent('input', { bubbles: true, cancelable: true, composed: true }));
+    dom.dispatchEvent(
+      new InputEvent("input", {
+        bubbles: true,
+        cancelable: true,
+        composed: true,
+      })
+    );
   }
 }
 

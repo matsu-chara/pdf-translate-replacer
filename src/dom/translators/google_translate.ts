@@ -31,7 +31,3 @@ export class GoogleTranslator implements DomProcessor {
     dom.textContent = newValue;
   }
 }
-
-const checkHasValue = (dom: Element): { value: string } | undefined => {
-  return "value" in dom ? dom : undefined;
-};

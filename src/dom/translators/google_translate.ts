@@ -9,12 +9,12 @@ export class GoogleTranslator implements DomProcessor {
       return undefined;
     }
 
-    const content = dom?.textContent;
-    if (content == null) {
+    const domValue = checkHasValue(dom);
+    if (domValue == undefined) {
       return undefined;
     }
 
-    return content;
+    return domValue.value;
   }
 
   writeStr(document: Document, newValue: string): void {
@@ -23,11 +23,15 @@ export class GoogleTranslator implements DomProcessor {
       return;
     }
 
-    const content = dom?.textContent;
-    if (content == null) {
+    const domValue = checkHasValue(dom);
+    if (domValue == undefined) {
       return undefined;
     }
 
-    dom.textContent = newValue;
+    (dom as HTMLTextAreaElement).value = newValue;
   }
 }
+
+const checkHasValue = (dom: Element): { value: string } | undefined => {
+  return "value" in dom ? dom : undefined;
+};

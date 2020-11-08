@@ -25,10 +25,10 @@ export class GoogleTranslator implements DomProcessor {
 
     const domValue = checkHasValue(dom);
     if (domValue == undefined) {
-      return undefined;
+      return;
     }
-
-    (dom as HTMLTextAreaElement).value = newValue;
+    domValue.value = newValue;
+    dom.dispatchEvent(new InputEvent('input', { bubbles: true, cancelable: true, composed: true }));
   }
 }
 

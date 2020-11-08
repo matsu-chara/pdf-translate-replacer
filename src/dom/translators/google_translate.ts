@@ -4,7 +4,7 @@ export class GoogleTranslator implements DomProcessor {
   private readonly textareaLabel = "原文";
 
   getStr(document: Document): string | undefined {
-    const dom = document.querySelector('[aria-label="' + this.textareaLabel + '"]');
+    const dom = document.querySelector(`[aria-label="${this.textareaLabel}"]`);
     if (dom == null) {
       return undefined;
     }
@@ -18,7 +18,7 @@ export class GoogleTranslator implements DomProcessor {
   }
 
   writeStr(document: Document, newValue: string): void {
-    const dom = document.querySelector('[aria-label="' + this.textareaLabel + '"]');
+    const dom = document.querySelector(`[aria-label="${this.textareaLabel}"]`);
     if (dom == null) {
       return;
     }

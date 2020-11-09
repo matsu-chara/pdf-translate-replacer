@@ -1,10 +1,10 @@
 import { DomProcessor } from "../processor";
 
 export class GoogleTranslator implements DomProcessor {
-  private readonly textareaId = "source";
+  private readonly textareaLabel = "原文";
 
   getStr(document: Document): string | undefined {
-    const dom = document.getElementById(this.textareaId);
+    const dom = document.querySelector(`[aria-label="${this.textareaLabel}"]`);
     if (dom == null) {
       return undefined;
     }
@@ -18,7 +18,7 @@ export class GoogleTranslator implements DomProcessor {
   }
 
   writeStr(document: Document, newValue: string): void {
-    const dom = document.getElementById(this.textareaId);
+    const dom = document.querySelector(`[aria-label="${this.textareaLabel}"]`);
     if (dom == null) {
       return;
     }
@@ -27,8 +27,14 @@ export class GoogleTranslator implements DomProcessor {
     if (domValue == undefined) {
       return;
     }
-
     domValue.value = newValue;
+    dom.dispatchEvent(
+      new InputEvent("input", {
+        bubbles: true,
+        cancelable: true,
+        composed: true,
+      })
+    );
   }
 }
 

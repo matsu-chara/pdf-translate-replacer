@@ -23,12 +23,20 @@ export class DeepLTranslator implements DomProcessor {
       return;
     }
 
-    const dom = checkHasValue(doms[0]);
-    if (dom == undefined) {
+    const domElement = doms[0];
+    const domWithValue = checkHasValue(domElement);
+    if (domWithValue == undefined) {
       return;
     }
 
-    dom.value = newValue;
+    domWithValue.value = newValue;
+    domElement.dispatchEvent(
+      new InputEvent("input", {
+        bubbles: true,
+        cancelable: true,
+        composed: true,
+      })
+    );
   }
 }
 

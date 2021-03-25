@@ -12,28 +12,28 @@
     "release": "./scripts/release.sh"
   },
   "devDependencies": {
-    "@types/copy-webpack-plugin": "^6.0.0",
-    "@types/jest": "^26.0.10",
-    "@types/webpack": "^4.41.21",
-    "@typescript-eslint/eslint-plugin": "^3.9.0",
-    "@typescript-eslint/parser": "^3.9.0",
-    "copy-webpack-plugin": "^6.0.3",
-    "eslint": "^7.7.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "jest": "^26.4.0",
-    "prettier": "^2.0.5",
-    "ts-jest": "^26.2.0",
-    "ts-loader": "^8.0.2",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.7",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "@types/copy-webpack-plugin": "6.0.0",
+    "@types/jest": "26.0.10",
+    "@types/webpack": "4.41.21",
+    "@typescript-eslint/eslint-plugin": "3.9.0",
+    "@typescript-eslint/parser": "3.9.0",
+    "copy-webpack-plugin": "6.0.3",
+    "eslint": "7.7.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "jest": "26.4.0",
+    "prettier": "2.0.5",
+    "ts-jest": "26.2.0",
+    "ts-loader": "8.0.2",
+    "ts-node": "8.10.2",
+    "typescript": "3.9.7",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12"
   },
   "resolutions": {
     "fast-glob": "https://files-5653q5abb.now.sh"
   },
   "dependencies": {
-    "webextension-polyfill-ts": "^0.21.0"
+    "webextension-polyfill-ts": "0.21.0"
   }
 }

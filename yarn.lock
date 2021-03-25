@@ -556,12 +556,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/copy-webpack-plugin@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@types/copy-webpack-plugin/-/copy-webpack-plugin-6.0.0.tgz#ad4a4d7be859ba6a6adcb970aab3256a705cd049"
-  integrity sha512-Ousy+sNap1j44eG+C9FZvTUybpp9lFmKjBRF7L0NDs/+SDA9OXKo2OpsHJfD/LMWflz+uvfTCBXH1CgdL6AW/g==
+"@types/copy-webpack-plugin@6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@types/copy-webpack-plugin/-/copy-webpack-plugin-6.4.0.tgz#225f86bc60a62052df39a110f7cbf7bc5156a0c1"
+  integrity sha512-f5mQG5c7xH3zLGrEmKgzLLFSGNB7Y4+4a+a1X4DvjgfbTEWEZUNNXUqGs5tBVCtb5qKPzm2z+6ixX3xirWmOCg==
   dependencies:
-    "@types/node" "*"
     "@types/webpack" "*"
 
 "@types/eslint-visitor-keys@^1.0.0":

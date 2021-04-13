@@ -13,10 +13,10 @@
   },
   "devDependencies": {
     "@types/copy-webpack-plugin": "6.4.0",
-    "@types/jest": "26.0.21",
-    "@types/webpack": "4.41.26",
+    "@types/jest": "26.0.22",
+    "@types/webpack": "5.28.0",
     "@typescript-eslint/eslint-plugin": "4.19.0",
-    "@typescript-eslint/parser": "4.19.0",
+    "@typescript-eslint/parser": "4.22.0",
     "copy-webpack-plugin": "8.1.0",
     "eslint": "7.22.0",
     "eslint-config-prettier": "8.1.0",

@@ -12,9 +12,8 @@
     "release": "./scripts/release.sh"
   },
   "devDependencies": {
-    "@types/copy-webpack-plugin": "6.4.0",
+    "@types/copy-webpack-plugin": "6.4.1",
     "@types/jest": "26.0.22",
-    "@types/webpack": "5.28.0",
     "@typescript-eslint/eslint-plugin": "4.19.0",
     "@typescript-eslint/parser": "4.22.0",
     "copy-webpack-plugin": "8.1.1",

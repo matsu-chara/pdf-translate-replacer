@@ -9,12 +9,12 @@ export class GoogleTranslator implements DomProcessor {
       return undefined;
     }
 
-    const domValue = checkHasValue(dom);
-    if (domValue == undefined) {
+    const inputElement = checkIntputElement(dom);
+    if (inputElement == undefined) {
       return undefined;
     }
 
-    return domValue.value;
+    return inputElement.value;
   }
 
   writeStr(document: Document, newValue: string): void {
@@ -23,11 +23,11 @@ export class GoogleTranslator implements DomProcessor {
       return;
     }
 
-    const domValue = checkHasValue(dom);
-    if (domValue == undefined) {
+    const inputElement = checkIntputElement(dom);
+    if (inputElement == undefined) {
       return;
     }
-    domValue.value = newValue;
+    inputElement.value = newValue;
     dom.dispatchEvent(
       new InputEvent("input", {
         bubbles: true,
@@ -38,6 +38,10 @@ export class GoogleTranslator implements DomProcessor {
   }
 }
 
-const checkHasValue = (dom: Element): { value: string } | undefined => {
-  return "value" in dom ? dom : undefined;
+const checkIntputElement = (dom: Element): HTMLInputElement | undefined => {
+  if (dom instanceof HTMLInputElement) {
+    return dom;
+  }
+
+  return undefined
 };

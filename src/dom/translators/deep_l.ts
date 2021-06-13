@@ -9,12 +9,12 @@ export class DeepLTranslator implements DomProcessor {
       return undefined;
     }
 
-    const dom = checkHasValue(doms[0]);
-    if (dom == undefined) {
+    const inputElement = checkIntputElement(doms[0]);
+    if (inputElement == undefined) {
       return undefined;
     }
 
-    return dom.value;
+    return inputElement.value;
   }
 
   writeStr(document: Document, newValue: string): void {
@@ -24,12 +24,12 @@ export class DeepLTranslator implements DomProcessor {
     }
 
     const domElement = doms[0];
-    const domWithValue = checkHasValue(domElement);
-    if (domWithValue == undefined) {
+    const inputElement = checkIntputElement(domElement);
+    if (inputElement == undefined) {
       return;
     }
 
-    domWithValue.value = newValue;
+    inputElement.value = newValue;
     domElement.dispatchEvent(
       new InputEvent("input", {
         bubbles: true,
@@ -40,6 +40,10 @@ export class DeepLTranslator implements DomProcessor {
   }
 }
 
-const checkHasValue = (dom: Element): { value: string } | undefined => {
-  return "value" in dom ? dom : undefined;
+const checkIntputElement = (dom: Element): HTMLInputElement | undefined => {
+  if (dom instanceof HTMLInputElement) {
+    return dom;
+  }
+
+  return undefined
 };

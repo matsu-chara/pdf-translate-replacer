@@ -1,6 +1,6 @@
 {
   "name": "pdf-translate-replacer",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "main": "index.js",
   "repository": "git@github.com:matsu-chara/pdf-translate-replacer.git",
   "author": "matsu-chara <matsuy00@gmail.com>",

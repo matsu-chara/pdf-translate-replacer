@@ -6,11 +6,13 @@ export class GoogleTranslator implements DomProcessor {
   getStr(document: Document): string | undefined {
     const dom = document.querySelector(`[aria-label="${this.textareaLabel}"]`);
     if (dom == null) {
+      console.log("can't get DOM");
       return undefined;
     }
 
     const inputElement = checkIntputElement(dom);
     if (inputElement == undefined) {
+      console.log("checkIntputElement failed");
       return undefined;
     }
 
@@ -38,8 +40,8 @@ export class GoogleTranslator implements DomProcessor {
   }
 }
 
-const checkIntputElement = (dom: Element): HTMLInputElement | undefined => {
-  if (dom instanceof HTMLInputElement) {
+const checkIntputElement = (dom: Element): HTMLTextAreaElement | undefined => {
+  if (dom instanceof HTMLTextAreaElement) {
     return dom;
   }
 

@@ -6,11 +6,13 @@ export class DeepLTranslator implements DomProcessor {
   getStr(document: Document): string | undefined {
     const doms = document.getElementsByClassName(this.textareaClassName);
     if (doms.length == 0) {
+      console.log("can't get DOM");
       return undefined;
     }
 
     const inputElement = checkIntputElement(doms[0]);
     if (inputElement == undefined) {
+      console.log("checkIntputElement failed");
       return undefined;
     }
 
@@ -40,8 +42,8 @@ export class DeepLTranslator implements DomProcessor {
   }
 }
 
-const checkIntputElement = (dom: Element): HTMLInputElement | undefined => {
-  if (dom instanceof HTMLInputElement) {
+const checkIntputElement = (dom: Element): HTMLTextAreaElement | undefined => {
+  if (dom instanceof HTMLTextAreaElement) {
     return dom;
   }
 

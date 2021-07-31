@@ -20,7 +20,7 @@
       "matches": [
         "https://translate.google.com/*",
         "https://translate.google.co.jp/*",
-        "https://www.deepl.com/translator"
+        "https://www.deepl.com/translator/*"
       ],
       "js": [
         "content_scripts.js"

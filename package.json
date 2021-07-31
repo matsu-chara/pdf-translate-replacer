@@ -31,6 +31,6 @@
     "fast-glob": "https://files-5653q5abb.now.sh"
   },
   "dependencies": {
-    "webextension-polyfill-ts": "0.25.0"
+    "webextension-polyfill-ts": "0.26.0"
   }
 }

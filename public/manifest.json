@@ -2,7 +2,7 @@
   "name": "pdf-translate-replacer",
   "version": "1.11.0",
   "manifest_version": 2,
-  "description": "replace pdf pasted string for translator",
+  "description": "Format the English text which is copied and pasted from pdf so that it can be easily translated.",
   "page_action": {
     "default_icon": {
       "32": "icons/icon_32.png"

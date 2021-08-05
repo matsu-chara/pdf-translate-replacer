@@ -1,10 +1,10 @@
 import { DomProcessor } from "../processor";
 
 export class GoogleTranslator implements DomProcessor {
-  private readonly textareaLabel = "原文";
+  private readonly domSelector = "textarea";
 
   getStr(document: Document): string | undefined {
-    const dom = document.querySelector(`[aria-label="${this.textareaLabel}"]`);
+    const dom = document.querySelector(this.domSelector);
     if (dom == null) {
       console.log("can't get DOM");
       return undefined;
@@ -20,7 +20,7 @@ export class GoogleTranslator implements DomProcessor {
   }
 
   writeStr(document: Document, newValue: string): void {
-    const dom = document.querySelector(`[aria-label="${this.textareaLabel}"]`);
+    const dom = document.querySelector(this.domSelector);
     if (dom == null) {
       return;
     }

@@ -1,16 +1,16 @@
 import { DomProcessor } from "../processor";
 
 export class DeepLTranslator implements DomProcessor {
-  private readonly textareaClassName = "lmt__source_textarea";
+  private readonly domSelector = "textarea";
 
   getStr(document: Document): string | undefined {
-    const doms = document.getElementsByClassName(this.textareaClassName);
-    if (doms.length == 0) {
+    const dom = document.querySelector(this.domSelector);
+    if (dom == null) {
       console.log("can't get DOM");
       return undefined;
     }
 
-    const inputElement = checkIntputElement(doms[0]);
+    const inputElement = checkIntputElement(dom);
     if (inputElement == undefined) {
       console.log("checkIntputElement failed");
       return undefined;
@@ -20,19 +20,18 @@ export class DeepLTranslator implements DomProcessor {
   }
 
   writeStr(document: Document, newValue: string): void {
-    const doms = document.getElementsByClassName(this.textareaClassName);
-    if (doms.length == 0) {
+    const dom = document.querySelector(this.domSelector);
+    if (dom == null) {
       return;
     }
 
-    const domElement = doms[0];
-    const inputElement = checkIntputElement(domElement);
+    const inputElement = checkIntputElement(dom);
     if (inputElement == undefined) {
       return;
     }
 
     inputElement.value = newValue;
-    domElement.dispatchEvent(
+    dom.dispatchEvent(
       new InputEvent("input", {
         bubbles: true,
         cancelable: true,

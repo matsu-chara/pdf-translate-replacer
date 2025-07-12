@@ -1,6 +1,6 @@
 {
   "name": "pdf-translate-replacer",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "manifest_version": 3,
   "description": "Format the English text which is copied and pasted from pdf so that it can be easily translated.",
   "action": {

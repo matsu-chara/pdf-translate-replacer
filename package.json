@@ -12,25 +12,24 @@
     "release": "./scripts/release.sh"
   },
   "devDependencies": {
-    "@types/copy-webpack-plugin": "8.0.0",
-    "@types/jest": "26.0.23",
-    "@typescript-eslint/eslint-plugin": "4.28.5",
-    "@typescript-eslint/parser": "4.28.4",
-    "copy-webpack-plugin": "9.0.1",
-    "eslint": "7.32.0",
-    "eslint-config-prettier": "8.3.0",
-    "jest": "26.6.3",
-    "prettier": "2.3.2",
-    "ts-jest": "26.5.6",
-    "ts-loader": "9.2.3",
-    "ts-node": "9.1.1",
-    "typescript": "4.3.5",
-    "webpack-cli": "4.7.2"
-  },
-  "resolutions": {
-    "fast-glob": "https://files-5653q5abb.now.sh"
+    "@types/copy-webpack-plugin": "8.0.1",
+    "@types/jest": "30.0.0",
+    "@typescript-eslint/eslint-plugin": "8.36.0",
+    "@typescript-eslint/parser": "8.36.0",
+    "copy-webpack-plugin": "13.0.0",
+    "eslint": "9.31.0",
+    "eslint-config-prettier": "10.1.5",
+    "jest": "30.0.4",
+    "prettier": "3.6.2",
+    "ts-jest": "29.4.0",
+    "ts-loader": "9.5.2",
+    "ts-node": "10.9.2",
+    "typescript": "5.8.3",
+    "webpack-cli": "6.0.1"
   },
   "dependencies": {
-    "webextension-polyfill-ts": "0.25.0"
-  }
+    "@types/webextension-polyfill": "^0.12.3",
+    "webextension-polyfill": "^0.12.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

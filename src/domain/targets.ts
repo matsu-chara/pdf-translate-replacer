@@ -14,7 +14,7 @@ const targets: Target[] = [
     typeOfTranslator: TypeOfTranslator.GOOGLE_TRANSLATE,
   },
   {
-    urlPrefix: "https://www.deepl.com/translator",
+    urlPrefix: "https://www.deepl.com/",
     typeOfTranslator: TypeOfTranslator.DEEP_L,
   },
 ];

@@ -1,9 +1,9 @@
 {
   "name": "pdf-translate-replacer",
   "version": "1.13.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "description": "Format the English text which is copied and pasted from pdf so that it can be easily translated.",
-  "page_action": {
+  "action": {
     "default_icon": {
       "32": "icons/icon_32.png"
     },
@@ -14,13 +14,13 @@
     "48": "icons/icon_48.png",
     "128": "icons/icon_128.png"
   },
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "content_scripts": [
     {
       "matches": [
         "https://translate.google.com/*",
         "https://translate.google.co.jp/*",
-        "https://www.deepl.com/translator/*"
+        "https://www.deepl.com/ja/translator",
+        "https://www.deepl.com/en/translator"
       ],
       "js": [
         "content_scripts.js"
@@ -29,14 +29,12 @@
     }
   ],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "permissions": [
+  "host_permissions": [
     "https://translate.google.com/*",
     "https://translate.google.co.jp/*",
-    "https://www.deepl.com/translator"
+    "https://www.deepl.com/ja/translator",
+    "https://www.deepl.com/en/translator"
   ]
 }

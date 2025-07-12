@@ -1,7 +1,8 @@
 import { DomProcessor } from "../processor";
 
 export class DeepLTranslator implements DomProcessor {
-  private readonly domSelector = "textarea";
+  private readonly domSelector =
+    'd-textarea[name="source"] > div[contenteditable="true"]';
 
   getStr(document: Document): string | undefined {
     const dom = document.querySelector(this.domSelector);
@@ -10,13 +11,12 @@ export class DeepLTranslator implements DomProcessor {
       return undefined;
     }
 
-    const inputElement = checkIntputElement(dom);
-    if (inputElement == undefined) {
-      console.log("checkIntputElement failed");
+    const text = dom.textContent;
+    if (text == null) {
+      console.log("textContent is null");
       return undefined;
     }
-
-    return inputElement.value;
+    return text;
   }
 
   writeStr(document: Document, newValue: string): void {
@@ -25,12 +25,7 @@ export class DeepLTranslator implements DomProcessor {
       return;
     }
 
-    const inputElement = checkIntputElement(dom);
-    if (inputElement == undefined) {
-      return;
-    }
-
-    inputElement.value = newValue;
+    dom.textContent = newValue;
     dom.dispatchEvent(
       new InputEvent("input", {
         bubbles: true,
@@ -40,11 +35,3 @@ export class DeepLTranslator implements DomProcessor {
     );
   }
 }
-
-const checkIntputElement = (dom: Element): HTMLTextAreaElement | undefined => {
-  if (dom instanceof HTMLTextAreaElement) {
-    return dom;
-  }
-
-  return undefined
-};

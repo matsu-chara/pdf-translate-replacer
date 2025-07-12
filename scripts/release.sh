@@ -3,7 +3,7 @@
 set -eu
 
 function js_build() {
-  webpack --mode=production
+  yarn run webpack --mode=production
 }
 
 function bump_version() {

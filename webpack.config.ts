@@ -3,6 +3,7 @@ import path from "path";
 import CopyPlugin from "copy-webpack-plugin";
 
 const config: Configuration = {
+  devtool: "cheap-module-source-map",
   entry: {
     content_scripts: path.join(__dirname, "src", "content_scripts.ts"),
     background: path.join(__dirname, "src", "background.ts"),
@@ -26,9 +27,6 @@ const config: Configuration = {
   plugins: [
     new CopyPlugin({
       patterns: [{ from: "public", to: "." }],
-      options: {
-        concurrency: 100,
-      },
     }),
   ],
 };

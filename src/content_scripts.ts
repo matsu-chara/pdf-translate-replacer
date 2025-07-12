@@ -1,9 +1,9 @@
-import { browser } from "webextension-polyfill-ts";
+import browser from "webextension-polyfill";
 import * as replacer from "./domain/replacer";
 import * as targets from "./domain/targets";
 import * as processor from "./dom/processor";
 
-browser.runtime.onMessage.addListener((request) => {
+browser.runtime.onMessage.addListener((request: unknown) => {
   if (!targets.isInstanceOfTarget(request)) {
     return;
   }
